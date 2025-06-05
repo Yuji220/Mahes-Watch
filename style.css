@@ -1,0 +1,318 @@
+/* Reset & General */
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #111;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* Header */
+header {
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+header .logo h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  color: #ffd700;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 120px 20px 100px;
+  background: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 0;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ffd700;
+}
+.hero-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ffd700;
+}
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 35px;
+  text-shadow: 0 0 6px #000;
+}
+.btn-primary {
+  background: #ffd700;
+  border: none;
+  padding: 16px 40px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #ffd700aa;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn-primary:hover {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 8px 20px #fff7cc;
+}
+
+/* Collections Section */
+.collections-section {
+  padding: 80px 0;
+}
+.collections-section h3 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  color: #ffd700;
+  margin-bottom: 50px;
+}
+.collection-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.collection-item {
+  border-radius: 12px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 15px #ffd70055;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #222;
+}
+.collection-item img {
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+.collection-item h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.collection-item p {
+  font-size: 16px;
+  color: #ddd;
+}
+.collection-item.black {
+  background: #111;
+  border: 2px solid #333;
+}
+.collection-item.gold {
+  background: #fff8dc;
+  color: #bfa100;
+  border: 2px solid #ffd700;
+}
+.collection-item.gold h4 { color: #bfa100; }
+.collection-item.white {
+  background: #fff;
+  color: #222;
+  border: 2px solid #eee;
+}
+.collection-item.white h4 { color: #222; }
+
+/* Pricing Section */
+.pricing-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #181818;
+  color: #fff;
+}
+.pricing-section h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+.pricing-section p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #ccc;
+}
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.pricing-card {
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222;
+  color: #fff;
+}
+.pricing-card.black {
+  border: 2px solid #333;
+  background: #111;
+}
+.pricing-card.gold {
+  border: 2px solid #ffd700;
+  background: #fff8dc;
+  color: #bfa100;
+}
+.pricing-card.gold h4, .pricing-card.gold .price { color: #bfa100; }
+.pricing-card.white {
+  border: 2px solid #eee;
+  background: #fff;
+  color: #222;
+}
+.pricing-card.white h4, .pricing-card.white .price { color: #222; }
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px #ffd70099;
+}
+.pricing-card h4 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.pricing-card button {
+  background-color: #ffd700;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.pricing-card button:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 0 120px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ccc;
+}
+.about-section h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #ffd700;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 14px;
+}
+footer .social-links {
+  margin-top: 10px;
+}
+footer .social-links a {
+  color: #ffd700;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .collection-grid, .pricing-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .collection-item, .pricing-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-section h2 {
+    font-size: 32px;
+  }
+  .btn-primary {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+}
